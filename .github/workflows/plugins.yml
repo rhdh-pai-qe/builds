@@ -35,4 +35,5 @@ jobs:
       - name: Push image
         run: |
           podman login -u="$QUAY_USER" -p="$QUAY_TOKEN" quay.io
+          echo "FROM $TAG" | podman build --label quay.expires-after="1d" -t $TAG
           podman push $TAG
