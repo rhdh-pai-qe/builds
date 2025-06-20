@@ -34,5 +34,5 @@ jobs:
           npx @janus-idp/cli@latest package package-dynamic-plugins --tag $TAG
       - name: Push image
         run: |
-          podman login -u="$USERNAME" -p="$TOKEN" quay.io
+          podman login -u="$QUAY_USER" -p="$QUAY_TOKEN" quay.io
           podman push $TAG
