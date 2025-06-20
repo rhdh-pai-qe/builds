@@ -25,6 +25,7 @@ jobs:
           git fetch origin $REF:workwork
           git checkout workwork
       - name: Build workspace
+        working-directory: rhdh-plugins
         run: |
           cd workspaces/$WORKSPACE
           yarn
