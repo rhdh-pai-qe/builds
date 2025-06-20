@@ -22,7 +22,7 @@ jobs:
         run: |
           git clone https://github.com/redhat-developer/rhdh-plugins
           cd rhdh-plugins
-          git fetch $REF:workwork
+          git fetch origin $REF:workwork
           git checkout workwork
       - name: Build workspace
         run: |
